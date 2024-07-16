@@ -8,7 +8,7 @@ def top_students(mongo_collection):
     '''
     average score must be part of each item returns with key = averageScore
     '''
-     top_student = mongo_collection.aggregate([
+    top_student = mongo_collection.aggregate([
         {
             "$project": {
                 "name": "$name",
