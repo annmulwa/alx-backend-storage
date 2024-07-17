@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Implementing an expiring web cache and tracker
+web cache and tracker
 """
 import requests
 import redis
@@ -31,9 +31,6 @@ def count_url_access(method):
 
 @count_url_access
 def get_page(url: str) -> str:
-    """
-    uses the requests module to obtain the HTML
-    content of a particular URL and returns it
-    """
+    """ Returns HTML content of a url """
     res = requests.get(url)
     return res.text
